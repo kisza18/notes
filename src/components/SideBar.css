@@ -1,6 +1,6 @@
 .side-bar {
   position: fixed;
-  width: 300px;
+  width: 260px;
   min-height: 100vh;
   background-color: var(--gray);
   padding: 20px 40px;
@@ -9,7 +9,7 @@
 .side-bar--header {
   display: flex;
   align-items: start;
-  justify-content: start;
+  justify-content: center;
   margin-top: 3px;
   cursor: pointer;
 }

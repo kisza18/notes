@@ -1,7 +1,7 @@
 .note {
   position: relative;
-  height: 200px;
-  width: 300px;
+  height: 180px;
+  width: 280px;
   border-radius: 10px;
   padding: 20px;
   display: grid;
@@ -23,4 +23,10 @@
 }
 .note > img:hover {
   background: gray;
+}
+.note > p {
+  font-size: 15px;
+}
+.note-container > p {
+  font-size: 15px;
 }
