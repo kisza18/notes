@@ -1,0 +1,50 @@
+.side-bar {
+  position: fixed;
+  width: 300px;
+  min-height: 100vh;
+  background-color: var(--gray);
+  padding: 20px 40px;
+  border-right: 1px solid var(--dark);
+}
+.side-bar--header {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  margin-top: 3px;
+  cursor: pointer;
+}
+.side-bar--logo {
+  width: 30px;
+  margin-right: 10px;
+}
+.side-bar--header > h3 {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+}
+.add-note {
+  background-color: var(--dark);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.add-note:hover {
+  background-color: rgb(75, 75, 75);
+}
+.add-note > h3 {
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.add-note > button {
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}

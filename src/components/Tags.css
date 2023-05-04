@@ -1,0 +1,9 @@
+.tags {
+  margin-top: 80px;
+}
+.tags > h3 {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}

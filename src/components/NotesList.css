@@ -1,0 +1,8 @@
+.notes-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 40px;
+  margin-left: 300px;
+  margin-top: 80px;
+}
