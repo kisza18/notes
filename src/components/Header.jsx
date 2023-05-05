@@ -1,12 +1,16 @@
-import Icon from "../assets/UI/Icon";
+import Icon from "./UI/Icon";
 import "./Header.css";
 
 const Header = (props) => {
   return (
     <div className="header">
       <div className="container">
-        <Icon title={props.title} name="" color={props.color} />
-        <h3 className="header--title">{props.name} notes</h3>
+        <Icon
+          title={props.title}
+          name={props.name}
+          color={props.color}
+          quantity={props.quantity}
+        />
       </div>
     </div>
   );

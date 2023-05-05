@@ -10,7 +10,10 @@ const Icon = (props) => {
       <div className="icon" style={{ background: props.color }}>
         {props.title}
       </div>
-      <h4>{props.name}</h4>
+      <div className="content">
+        <h4>{props.name}</h4>
+        <h4>({props.quantity})</h4>
+      </div>
     </div>
   );
 };

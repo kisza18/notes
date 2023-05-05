@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Icon from "../assets/UI/Icon";
+import Icon from "./UI/Icon";
 import "./Tags.css";
 
 const Tags = (props) => {
@@ -13,19 +13,22 @@ const Tags = (props) => {
       <Icon
         title="H"
         name="home"
-        color="var(--yellow)"
+        color="var(--home)"
+        quantity={props.quantityH}
         onClick={tagChangeHandler}
       />
       <Icon
         title="W"
         name="work"
-        color="var(--blue)"
+        color="var(--work)"
+        quantity={props.quantityW}
         onClick={tagChangeHandler}
       />
       <Icon
         title="P"
         name="personal"
-        color="var(--red)"
+        color="var(--personal)"
+        quantity={props.quantityP}
         onClick={tagChangeHandler}
       />
     </div>

@@ -3,9 +3,9 @@
 :root {
   --dark: #212830;
   --gray: #2d343c;
-  --blue: #3c9ad8;
-  --yellow: #f1b627;
-  --red: #eb2e66;
+  --work: #3c9ad8;
+  --home: #f1b627;
+  --personal: #eb2e66;
 }
 
 * {
