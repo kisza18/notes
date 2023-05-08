@@ -30,3 +30,16 @@
 .note-container > p {
   font-size: 15px;
 }
+@media screen and (max-width: 610px) {
+  .note {
+    width: 200px;
+    height: 250px;
+    padding: 10px;
+  }
+  .note-container {
+    display: grid;
+  }
+  .note > img {
+    bottom: 0;
+  }
+}

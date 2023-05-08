@@ -2,11 +2,13 @@ import { useState } from "react";
 import SideBar from "./components/SideBar";
 import Header from "./components/Header";
 import NotesList from "./components/NotesList";
+import Modal from "./components/Modal";
 
 function App() {
   const [tagTitle, setTagTitle] = useState("A");
   const [tagName, setTagName] = useState("all");
   const [tagColor, setTagColor] = useState("black");
+  const [isShow, setIsShow] = useState(false);
 
   const [notes, setNotes] = useState([
     {
@@ -65,6 +67,10 @@ function App() {
     }
   };
 
+  const toggleModal = () => {
+    setIsShow(!isShow);
+  };
+
   const homeArray = notes.filter((note) => note.tag === "home");
   const workArray = notes.filter((note) => note.tag === "work");
   const personalArray = notes.filter((note) => note.tag === "personal");
@@ -78,6 +84,13 @@ function App() {
   return (
     <>
       <main>
+        {isShow && (
+          <Modal
+            cancelModal={toggleModal}
+            sendNewNote={newNoteData}
+            modalHandler={toggleModal}
+          />
+        )}
         <div className="side">
           <SideBar
             activeTag={tagHandler}
@@ -85,7 +98,7 @@ function App() {
             quantityH={homeArray.length}
             quantityW={workArray.length}
             quantityP={personalArray.length}
-            sendNewNote={newNoteData}
+            showModal={toggleModal}
           />
         </div>
         <div className="head">

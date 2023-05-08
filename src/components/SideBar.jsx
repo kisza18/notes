@@ -1,5 +1,4 @@
 import Tags from "./Tags";
-import AddNote from "./AddNote";
 import "./SideBar.css";
 
 const SideBar = (props) => {
@@ -8,9 +7,6 @@ const SideBar = (props) => {
   };
   const headerClickHandler = () => {
     props.headerClick("A");
-  };
-  const getData = (note) => {
-    props.sendNewNote(note);
   };
   return (
     <div className="side-bar">
@@ -24,7 +20,10 @@ const SideBar = (props) => {
         quantityW={props.quantityW}
         quantityP={props.quantityP}
       />
-      <AddNote sendData={getData} />
+      <div className="add-note-control" onClick={props.showModal}>
+        <h3>add note</h3>
+        <button>+</button>
+      </div>
     </div>
   );
 };

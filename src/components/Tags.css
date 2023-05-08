@@ -7,3 +7,8 @@
   margin-bottom: 20px;
   letter-spacing: 1px;
 }
+@media screen and (max-height: 400px) {
+  .tags {
+    margin-top: 50px;
+  }
+}

@@ -22,3 +22,36 @@
   font-size: 28px;
   font-weight: 600;
 }
+.add-note-control {
+  background-color: var(--dark);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.add-note-control:hover {
+  background-color: rgb(75, 75, 75);
+}
+.add-note-control > h3 {
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.add-note-control > button {
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+@media screen and (max-width: 610px) {
+  .side-bar {
+    width: 170px;
+    padding: 20px 10px;
+  }
+}
