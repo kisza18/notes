@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SideBar from "./components/SideBar";
 import Header from "./components/Header";
 import NotesList from "./components/NotesList";
 import Modal from "./components/Modal";
+import Intro from "./components/Intro";
 
 function App() {
   const [tagTitle, setTagTitle] = useState("A");
   const [tagName, setTagName] = useState("all");
   const [tagColor, setTagColor] = useState("black");
   const [isShow, setIsShow] = useState(false);
+  const [intro, setIntro] = useState(true);
 
   const [notes, setNotes] = useState([
     {
@@ -81,8 +83,20 @@ function App() {
     });
   };
 
+  const toggleIntro = () => {
+    setIntro(false);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      toggleIntro();
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
+      {intro && <Intro />}
       <main>
         {isShow && (
           <Modal
